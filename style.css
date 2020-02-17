@@ -1,0 +1,243 @@
+@charset "utf-8";
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+/* Common */
+html{overflow-y: scroll}
+body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select{margin:0;padding:0}
+body,input,textarea,select,button,table{font-family: 'Nanum Gothic', sans-serif;font-size:12px}
+img,fieldset{border:0}
+img{vertical-align:top}
+ul,ol,li{list-style:none}
+em,address{font-style:normal}
+a{text-decoration:none}
+a:hover,a:active,a:focus{text-decoration:none}
+table{border-collapse:collapse}	
+hr{display:none}
+legend{*width:0}
+.blind,legend{display:block;overflow:hidden;position:absolute;left:0;top:-9999em}
+.skip a{display:block;position:absolute;left:0;top:-9999em;z-index:9999;overflow:hidden;width:100%;background-color:#0d2ec0;color:#FFF;text-align:center;text-decoration:none;line-height:2.2}
+.skip a:hover,.skip a:active,.skip a:focus{top:0}
+.clearfix{*zoom:1}
+.clearfix:after{content:' ';display:block;clear:both}
+
+/* style */
+#wrap {}
+#bg_top {/*min-width:980px;*/width:100%;background:url(../img/mainbg.png) no-repeat 50% 0}
+#bg_bottom {min-width:980px;width:100%;background:url(../img/bottombg.png) no-repeat 50% 0}
+
+/* header */
+/*#header {min-width:980px}*/
+#header .header_inn {width:980px;margin:0 auto}
+#header .header_inn .login {padding:30px 0 20px}
+#header .header_inn .login ul {float:right}
+#header .header_inn .login ul li {float:left}
+#header .header_inn .login ul .login {padding:0 20px;background:url(../img/lgnbar.png) no-repeat 73px 2px}
+#header .header_inn .login ul .join {padding:0 20px;background:url(../img/lgnbar.png) no-repeat 84px 2px}
+#header .header_inn .login ul .sitemap {padding-left:20px}
+#header .header_inn .login ul li a {display:block;color:#444}
+#header .header_inn .login ul li a:hover {text-decoration:underline}
+
+#header .header_inn .gnb {}
+#header .header_inn .gnb .logo {float:left;width:163px;border-top:3px solid #115fad}
+#header .header_inn .gnb .logo a {display:block;width:172px;height:33px;padding-top:20px;background:url(../img/sp_com.png) no-repeat 0 -5px;text-indent:-9999em}
+#header .header_inn .gnb .gnbarea {float:right;border-top:3px solid #12140b}
+#header .header_inn .gnb .gnbarea ul {}
+#header .header_inn .gnb .gnbarea ul li {float:left;margin-top:20px}
+#header .header_inn .gnb .gnbarea ul li a{margin:0 40px}
+#header .header_inn .gnb .gnbarea .mm_sub {display:none}
+
+#header .header_inn .gnb .gnbarea ul .introduction {position:relative}
+#header .header_inn .gnb .gnbarea ul .introduction a {display:block;width:101px;height:33px;margin:0 40px 0 0;background:url(../img/sp_com.png) no-repeat 0 -57px;text-indent:-9999em}
+#header .header_inn .gnb .gnbarea ul .introduction a:hover {background:url(../img/sp_com.png) no-repeat 0 -87px}
+#header .header_inn .gnb .gnbarea ul .introduction .introduction_sub {position:absolute;top:30px;left:0;padding:5px 1px 15px 0;border-bottom:3px solid #115fad}
+#header .header_inn .gnb .gnbarea ul .introduction .introduction_sub li {float:none;margin:5px 0}
+#header .header_inn .gnb .gnbarea ul .introduction .introduction_sub li a {width:100px;height:15px}
+#header .header_inn .gnb .gnbarea ul .introduction .introduction_sub .introduction_sub1 a {background:url(../img/sp_com.png) no-repeat 0 -120px}
+#header .header_inn .gnb .gnbarea ul .introduction:hover .introduction_sub .introduction_sub1 a {background:url(../img/sp_com.png) no-repeat 0 -210px}
+#header .header_inn .gnb .gnbarea ul .introduction .introduction_sub .introduction_sub1 a:hover {background:url(../img/sp_com.png) no-repeat 0 -300px}
+#header .header_inn .gnb .gnbarea ul .introduction .introduction_sub .introduction_sub2 a {background:url(../img/sp_com.png) no-repeat 0 -135px}
+#header .header_inn .gnb .gnbarea ul .introduction:hover .introduction_sub .introduction_sub2 a {background:url(../img/sp_com.png) no-repeat 0 -225px}
+#header .header_inn .gnb .gnbarea ul .introduction .introduction_sub .introduction_sub2 a:hover {background:url(../img/sp_com.png) no-repeat 0 -315px}
+#header .header_inn .gnb .gnbarea ul .introduction .introduction_sub .introduction_sub3 a {background:url(../img/sp_com.png) no-repeat 0 -150px}
+#header .header_inn .gnb .gnbarea ul .introduction:hover .introduction_sub .introduction_sub3 a {background:url(../img/sp_com.png) no-repeat 0 -240px}
+#header .header_inn .gnb .gnbarea ul .introduction .introduction_sub .introduction_sub3 a:hover {background:url(../img/sp_com.png) no-repeat 0 -330px}
+#header .header_inn .gnb .gnbarea ul .introduction .introduction_sub .introduction_sub4 a {background:url(../img/sp_com.png) no-repeat 0 -165px}
+#header .header_inn .gnb .gnbarea ul .introduction:hover .introduction_sub .introduction_sub4 a {background:url(../img/sp_com.png) no-repeat 0 -255px}
+#header .header_inn .gnb .gnbarea ul .introduction .introduction_sub .introduction_sub4 a:hover {background:url(../img/sp_com.png) no-repeat 0 -345px}
+#header .header_inn .gnb .gnbarea ul .introduction .introduction_sub .introduction_sub5 a {background:url(../img/sp_com.png) no-repeat 0 -180px}
+#header .header_inn .gnb .gnbarea ul .introduction:hover .introduction_sub .introduction_sub5 a {background:url(../img/sp_com.png) no-repeat 0 -270px}
+#header .header_inn .gnb .gnbarea ul .introduction .introduction_sub .introduction_sub5 a:hover {background:url(../img/sp_com.png) no-repeat 0 -360px}
+#header .header_inn .gnb .gnbarea ul .introduction .introduction_sub .introduction_sub6 a {background:url(../img/sp_com.png) no-repeat 0 -195px}
+#header .header_inn .gnb .gnbarea ul .introduction:hover .introduction_sub .introduction_sub6 a {background:url(../img/sp_com.png) no-repeat 0 -285px}
+#header .header_inn .gnb .gnbarea ul .introduction .introduction_sub .introduction_sub6 a:hover {background:url(../img/sp_com.png) no-repeat 0 -375px}
+
+#header .header_inn .gnb .gnbarea ul .reservation {position:relative}
+#header .header_inn .gnb .gnbarea ul .reservation a {display:block;width:97px;height:33px;background:url(../img/sp_com.png) no-repeat -104px -57px;text-indent:-9999em}
+#header .header_inn .gnb .gnbarea ul .reservation a:hover {background:url(../img/sp_com.png) no-repeat -104px -87px}
+#header .header_inn .gnb .gnbarea ul .reservation .reservation_sub {position:absolute;top:30px;left:0;padding:5px 0 75px;border-bottom:3px solid #115fad}
+#header .header_inn .gnb .gnbarea ul .reservation .reservation_sub li {float:none;margin:5px 0}
+#header .header_inn .gnb .gnbarea ul .reservation .reservation_sub li a {width:100px;height:15px}
+#header .header_inn .gnb .gnbarea ul .reservation .reservation_sub .reservation_sub1 a {background:url(../img/sp_com.png) no-repeat -104px -120px}
+#header .header_inn .gnb .gnbarea ul .reservation:hover .reservation_sub .reservation_sub1 a {background:url(../img/sp_com.png) no-repeat -104px -180px}
+#header .header_inn .gnb .gnbarea ul .reservation .reservation_sub .reservation_sub1 a:hover {background:url(../img/sp_com.png) no-repeat -104px -240px}
+#header .header_inn .gnb .gnbarea ul .reservation .reservation_sub .reservation_sub2 a {background:url(../img/sp_com.png) no-repeat -104px -135px}
+#header .header_inn .gnb .gnbarea ul .reservation:hover .reservation_sub .reservation_sub2 a {background:url(../img/sp_com.png) no-repeat -104px -195px}
+#header .header_inn .gnb .gnbarea ul .reservation .reservation_sub .reservation_sub2 a:hover {background:url(../img/sp_com.png) no-repeat -104px -255px}
+#header .header_inn .gnb .gnbarea ul .reservation .reservation_sub .reservation_sub3 a {background:url(../img/sp_com.png) no-repeat -104px -150px}
+#header .header_inn .gnb .gnbarea ul .reservation:hover .reservation_sub .reservation_sub3 a {background:url(../img/sp_com.png) no-repeat -104px -210px}
+#header .header_inn .gnb .gnbarea ul .reservation .reservation_sub .reservation_sub3 a:hover {background:url(../img/sp_com.png) no-repeat -104px -270px}
+
+#header .header_inn .gnb .gnbarea ul .course {position:relative}
+#header .header_inn .gnb .gnbarea ul .course a {display:block;width:55px;height:33px;background:url(../img/sp_com.png) no-repeat -204px -57px;text-indent:-9999em}
+#header .header_inn .gnb .gnbarea ul .course a:hover {background:url(../img/sp_com.png) no-repeat -204px -87px}
+#header .header_inn .gnb .gnbarea ul .course .course_sub {position:absolute;top:30px;left:0;padding:5px 0 35px;border-bottom:3px solid #115fad}
+#header .header_inn .gnb .gnbarea ul .course .course_sub li {float:none;margin:5px 0}
+#header .header_inn .gnb .gnbarea ul .course .course_sub li a {width:60px;height:15px}
+#header .header_inn .gnb .gnbarea ul .course .course_sub .course_sub1 a {background:url(../img/sp_com.png) no-repeat -204px -120px}
+#header .header_inn .gnb .gnbarea ul .course:hover .course_sub .course_sub1 a {background:url(../img/sp_com.png) no-repeat -204px -195px}
+#header .header_inn .gnb .gnbarea ul .course .course_sub .course_sub1 a:hover {background:url(../img/sp_com.png) no-repeat -204px -270px}
+#header .header_inn .gnb .gnbarea ul .course .course_sub .course_sub2 a {background:url(../img/sp_com.png) no-repeat -204px -135px}
+#header .header_inn .gnb .gnbarea ul .course:hover .course_sub .course_sub2 a {background:url(../img/sp_com.png) no-repeat -204px -210px}
+#header .header_inn .gnb .gnbarea ul .course .course_sub .course_sub2 a:hover {background:url(../img/sp_com.png) no-repeat -204px -285px}
+#header .header_inn .gnb .gnbarea ul .course .course_sub .course_sub3 a {background:url(../img/sp_com.png) no-repeat -204px -150px}
+#header .header_inn .gnb .gnbarea ul .course:hover .course_sub .course_sub3 a {background:url(../img/sp_com.png) no-repeat -204px -225px}
+#header .header_inn .gnb .gnbarea ul .course .course_sub .course_sub3 a:hover {background:url(../img/sp_com.png) no-repeat -204px -300px}
+#header .header_inn .gnb .gnbarea ul .course .course_sub .course_sub4 a {background:url(../img/sp_com.png) no-repeat -204px -165px}
+#header .header_inn .gnb .gnbarea ul .course:hover .course_sub .course_sub4 a {background:url(../img/sp_com.png) no-repeat -204px -240px}
+#header .header_inn .gnb .gnbarea ul .course .course_sub .course_sub4 a:hover {background:url(../img/sp_com.png) no-repeat -204px -315px}
+#header .header_inn .gnb .gnbarea ul .course .course_sub .course_sub5 a {background:url(../img/sp_com.png) no-repeat -204px -180px}
+#header .header_inn .gnb .gnbarea ul .course:hover .course_sub .course_sub5 a {background:url(../img/sp_com.png) no-repeat -204px -255px}
+#header .header_inn .gnb .gnbarea ul .course .course_sub .course_sub5 a:hover {background:url(../img/sp_com.png) no-repeat -204px -330px}
+
+
+#header .header_inn .gnb .gnbarea ul .facilities {position:relative}
+#header .header_inn .gnb .gnbarea ul .facilities a {display:block;width:71px;height:33px;background:url(../img/sp_com.png) no-repeat -270px -57px;text-indent:-9999em}
+#header .header_inn .gnb .gnbarea ul .facilities a:hover {background:url(../img/sp_com.png) no-repeat -270px -87px}
+#header .header_inn .gnb .gnbarea ul .facilities .facilities_sub {position:absolute;top:30px;left:0;padding:5px 0 15px;border-bottom:3px solid #115fad}
+#header .header_inn .gnb .gnbarea ul .facilities .facilities_sub li {float:none;margin:5px 0}
+#header .header_inn .gnb .gnbarea ul .facilities .facilities_sub li a {width:80px;height:15px}
+#header .header_inn .gnb .gnbarea ul .facilities .facilities_sub .facilities_sub1 a {background:url(../img/sp_com.png) no-repeat -270px -120px}
+#header .header_inn .gnb .gnbarea ul .facilities:hover .facilities_sub .facilities_sub1 a {background:url(../img/sp_com.png) no-repeat -270px -195px}
+#header .header_inn .gnb .gnbarea ul .facilities .facilities_sub .facilities_sub1 a:hover {background:url(../img/sp_com.png) no-repeat -270px -270px}
+#header .header_inn .gnb .gnbarea ul .facilities .facilities_sub .facilities_sub2 a {width:110px;background:url(../img/sp_com.png) no-repeat -270px -345px}
+#header .header_inn .gnb .gnbarea ul .facilities:hover .facilities_sub .facilities_sub2 a {background:url(../img/sp_com.png) no-repeat -270px -360px}
+#header .header_inn .gnb .gnbarea ul .facilities .facilities_sub .facilities_sub2 a:hover {background:url(../img/sp_com.png) no-repeat -270px -375px}
+#header .header_inn .gnb .gnbarea ul .facilities .facilities_sub .facilities_sub3 a {background:url(../img/sp_com.png) no-repeat -270px -135px}
+#header .header_inn .gnb .gnbarea ul .facilities:hover .facilities_sub .facilities_sub3 a {background:url(../img/sp_com.png) no-repeat -270px -210px}
+#header .header_inn .gnb .gnbarea ul .facilities .facilities_sub .facilities_sub3 a:hover {background:url(../img/sp_com.png) no-repeat -270px -285px}
+#header .header_inn .gnb .gnbarea ul .facilities .facilities_sub .facilities_sub4 a {background:url(../img/sp_com.png) no-repeat -270px -150px}
+#header .header_inn .gnb .gnbarea ul .facilities:hover .facilities_sub .facilities_sub4 a {background:url(../img/sp_com.png) no-repeat -270px -225px}
+#header .header_inn .gnb .gnbarea ul .facilities .facilities_sub .facilities_sub4 a:hover {background:url(../img/sp_com.png) no-repeat -270px -300px}
+#header .header_inn .gnb .gnbarea ul .facilities .facilities_sub .facilities_sub5 a {background:url(../img/sp_com.png) no-repeat -270px -165px}
+#header .header_inn .gnb .gnbarea ul .facilities:hover .facilities_sub .facilities_sub5 a {background:url(../img/sp_com.png) no-repeat -270px -240px}
+#header .header_inn .gnb .gnbarea ul .facilities .facilities_sub .facilities_sub5 a:hover {background:url(../img/sp_com.png) no-repeat -270px -315px}
+#header .header_inn .gnb .gnbarea ul .facilities .facilities_sub .facilities_sub6 a {background:url(../img/sp_com.png) no-repeat -270px -180px}
+#header .header_inn .gnb .gnbarea ul .facilities:hover .facilities_sub .facilities_sub6 a {background:url(../img/sp_com.png) no-repeat -270px -255px}
+#header .header_inn .gnb .gnbarea ul .facilities .facilities_sub .facilities_sub6 a:hover {background:url(../img/sp_com.png) no-repeat -270px -330px}
+
+#header .header_inn .gnb .gnbarea ul .community {position:relative}
+#header .header_inn .gnb .gnbarea ul .community a {display:block;width:85px;height:33px;background:url(../img/sp_com.png) no-repeat -350px -57px;text-indent:-9999em}
+#header .header_inn .gnb .gnbarea ul .community a:hover {background:url(../img/sp_com.png) no-repeat -350px -87px}
+#header .header_inn .gnb .gnbarea ul .community .community_sub {position:absolute;top:30px;left:0;padding:5px 0 95px;border-bottom:3px solid #115fad}
+#header .header_inn .gnb .gnbarea ul .community .community_sub li {float:none;margin:5px 0}
+#header .header_inn .gnb .gnbarea ul .community .community_sub li a {width:80px;height:15px}
+#header .header_inn .gnb .gnbarea ul .community .community_sub .community_sub1 a {background:url(../img/sp_com.png) no-repeat -350px -120px}
+#header .header_inn .gnb .gnbarea ul .community:hover .community_sub .community_sub1 a {background:url(../img/sp_com.png) no-repeat -350px -165px}
+#header .header_inn .gnb .gnbarea ul .community .community_sub .community_sub1 a:hover {background:url(../img/sp_com.png) no-repeat -350px -210px}
+#header .header_inn .gnb .gnbarea ul .community .community_sub .community_sub2 a {background:url(../img/sp_com.png) no-repeat -350px -135px}
+#header .header_inn .gnb .gnbarea ul .community:hover .community_sub .community_sub2 a {background:url(../img/sp_com.png) no-repeat -350px -180px}
+#header .header_inn .gnb .gnbarea ul .community .community_sub .community_sub2 a:hover {background:url(../img/sp_com.png) no-repeat -350px -225px}
+
+
+/* content */
+/*#content {min-width:980px}*/
+#content .content_inn {width:980px;margin:150px auto 0}
+#content .content_inn .content_top {}
+#content .content_inn .content_top .weather {float:left;width:245px;height:201px;background:url(../img/sp_main.png) no-repeat 0 0}
+#content .content_inn .content_top .weather .weather_top {color:#fff}
+#content .content_inn .content_top .weather .weather_top .today1 {position:relative;float:left;width:85px;height:65px;padding:15px}
+#content .content_inn .content_top .weather .weather_top .today1 span {font-size:14px}
+#content .content_inn .content_top .weather .weather_top .today1 img {position:absolute;top:24px;left:25px}
+#content .content_inn .content_top .weather .weather_top .today2 {position:relative;float:right;width:100px;height:65px;padding:15px}
+#content .content_inn .content_top .weather .weather_top .today2 span {font-size:14px}
+#content .content_inn .content_top .weather .weather_top .today2 span.date{text-transform:uppercase}
+#content .content_inn .content_top .weather .weather_top .today2 .big {position:absolute;top:27px;left:12px;display:block;width:100px;font-size:50px;font-weight:600;border-bottom:2px solid #fff;letter-spacing:-0.1em}
+#content .content_inn .content_top .weather .weather_top .today2 .icon23 {position:absolute;top:37px;right:30px;display:block;width:30px;height:40px;background:url(../img/sp_main.png) no-repeat -440px -205px}
+#content .content_inn .content_top .weather .weather_top .today3 {margin-left:20px}
+#content .content_inn .content_top .weather .weather_top .today3 span {float:left;margin:0 5px;font-size:13px}
+#content .content_inn .content_top .weather .weather_top .today3 .today3icon {position:relative;display:block;width:50px}
+#content .content_inn .content_top .weather .weather_top .today3 .today3icon em {position:absolute;top:2px;right:-5px;display:block;width:10px;height:15px ;background:url(../img/sp_main.png) no-repeat -475px -205px}
+
+#content .content_inn .content_top .weather .weather_mid {}
+#content .content_inn .content_top .weather .weather_mid li {position:relative;float:left;width:82px;margin:10px;color:#fff;font-size:14px}
+#content .content_inn .content_top .weather .weather_mid .weather1 {display:block;margin:27px 20px 20px}
+#content .content_inn .content_top .weather .weather_mid .weather1 img {position:absolute;top:-9px;left:50px}
+#content .content_inn .content_top .weather .weather_mid .weather2 {display:block;margin:27px 20px 20px}
+#content .content_inn .content_top .weather .weather_mid .weather2 img {position:absolute;top:-13px;left:35px}
+
+#content .content_inn .content_top .weather .weather_bottom {}
+#content .content_inn .content_top .weather .weather_bottom li {}
+#content .content_inn .content_top .weather .weather_bottom li a {position:relative;display:block;padding-right:5px;width:240px;color:#fff;font-size:13px;line-height:2;text-align:center}
+#content .content_inn .content_top .weather .weather_bottom li a img {position:absolute;top:9px;right:75px}
+
+#content .content_inn .content_top .iconarea {float:right}
+#content .content_inn .content_top .iconarea ul {margin-top:135px}
+#content .content_inn .content_top .iconarea ul li {float:left;position:relative}
+#content .content_inn .content_top .iconarea ul .iconreservation a {display:block;width:157px;height:52px;margin:0 55px 0 10px;background:url(../img/sp_main.png) no-repeat 0 -203px;text-indent:-9999em}
+#content .content_inn .content_top .iconarea ul .iconwebcam a {display:block;width:178px;height:52px;margin:0 55px 0 10px;background:url(../img/sp_main.png) no-repeat -250px -202px;text-indent:-9999em}
+#content .content_inn .content_top .iconarea ul .iconmobile a {display:block;width:192px;height:52px;margin:0 55px 0 10px;background:url(../img/sp_main.png) no-repeat -250px -248px;text-indent:-9999em}
+
+#content .content_inn .content_mid {}
+#content .content_inn .content_mid .mid_inn {position:relative}
+#content .content_inn .content_mid .mid_inn .notice {float:left;position:relative;display:block;width:245px;height:220px;background:url(../img/bg_main_con.jpg) no-repeat 0 0}
+#content .content_inn .content_mid .mid_inn .notice .notice_inn {float:left;display:block;width:80px;height:70px;margin:20px;background:url(../img/sp_main.png) no-repeat -251px -38px;text-indent:-9999px}
+#content .content_inn .content_mid .mid_inn .notice a .btn_lft{position:absolute;top:20px;right:45px;float:left;display:block;width:20px;height:20px;background:url(../img/sp_main.png)no-repeat -250px 0;text-indent:-9999em}
+#content .content_inn .content_mid .mid_inn .notice a .btn_rgt{position:absolute;top:20px;right:20px;float:left;display:block;width:20px;height:20px;background:url(../img/sp_main.png)no-repeat -275px 0;text-indent:-9999em}
+
+#content .content_inn .content_mid .mid_inn .notice_menu {float:left;display:block;width:205px;height:180px;padding:20px;background:url(../img/bg_main_con.jpg) no-repeat -245px 0}
+#content .content_inn .content_mid .mid_inn .notice_menu li {border-bottom:1px solid #bababa}
+#content .content_inn .content_mid .mid_inn .notice_menu li a {float:left;display:block;width:155px;color:#333;font-size:12px;font-weight:300;line-height:3;letter-spacing:-0.05em;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}
+#content .content_inn .content_mid .mid_inn .notice_menu li a:hover {text-decoration:underline}
+#content .content_inn .content_mid .mid_inn .notice_menu li span {float:right;color:#666;font-size:11px;font-weight:300;line-height:3.2}
+#content .content_inn .content_mid .mid_inn .notice_menu .lastnoticemenu {border-bottom:0}
+
+#content .content_inn .content_mid .mid_inn .banner {float:right;display:block;width:490px;height:220px;background:url(../img/bg_main_con.jpg) no-repeat -490px 0}
+#content .content_inn .content_mid .mid_inn .bxslider {min-width:490px;width:490px}
+#content .content_inn .content_mid .mid_inn .bxslider li {}
+#content .content_inn .content_mid .mid_inn .bxslider li a {}
+
+#content .content_inn .content_mid .mid_inn .deco {position:absolute;top:-15px;right:80px;display:inline-block;width:42px;height:32px;background:url(../img/sp_main.png) no-repeat -300px 0;text-indent:-9999em}
+
+#content .content_inn .content_bottom {}
+#content .content_inn .content_bottom .bottom_inn {}
+#content .content_inn .content_bottom .bottom_inn ul {}
+#content .content_inn .content_bottom .bottom_inn ul li {float:left}
+
+#content .content_inn .content_bottom .bottom_inn ul .btn_directions a {position:relative;display:block;width:245px;height:220px;background:url(../img/bg_main_con.jpg) no-repeat 0 -220px}
+#content .content_inn .content_bottom .bottom_inn ul .btn_directions a span {position:absolute;top:20px;left:20px;display:block;width:138px;height:39px;background:url(../img/sp_main.png) no-repeat -336px -40px;text-indent:-9999px}
+
+#content .content_inn .content_bottom .bottom_inn ul .btn_contact a {position:relative;display:block;width:245px;height:220px;background:url(../img/bg_main_con.jpg) no-repeat -245px -220px}
+#content .content_inn .content_bottom .bottom_inn ul .btn_contact a span {position:absolute;top:20px;left:20px;display:block;width:140px;height:39px;background:url(../img/sp_main.png) no-repeat -336px -80px;text-indent:-9999px}
+
+#content .content_inn .content_bottom .bottom_inn ul .btn_club a {position:relative;display:block;width:245px;height:220px;background:url(../img/bg_main_con.jpg) no-repeat -490px -220px}
+#content .content_inn .content_bottom .bottom_inn ul .btn_club a span {position:absolute;top:20px;left:20px;display:block;width:138px;height:80px;background:url(../img/sp_main.png) no-repeat -250px -120px;text-indent:-9999px}
+
+#content .content_inn .content_bottom .bottom_inn ul .btn_course a {position:relative;display:block;width:245px;height:220px;background:url(../img/bg_main_con.jpg) no-repeat -735px -220px}
+#content .content_inn .content_bottom .bottom_inn ul .btn_course a span {position:absolute;top:20px;left:20px;display:block;width:90px;height:65px;background:url(../img/sp_main.png) no-repeat -390px -120px;text-indent:-9999px}
+
+#footer {min-width:980px}
+#footer .footer_inn {width:980px;margin:0 auto;padding:85px 0 255px}
+#footer .footer_inn .footer_inn_top {}
+#footer .footer_inn .footer_inn_top li {float:left;border-top:1px solid #444;border-bottom:1px solid #444}
+#footer .footer_inn .footer_inn_top li a {display:block;color:#444;font-size:12px;font-weight:600;line-height:3;letter-spacing:-0.1em}
+#footer .footer_inn .footer_inn_top li a:hover {text-decoration:underline}
+#footer .footer_inn .footer_inn_top .footer_inn_top_1 a {margin-right:25px}
+#footer .footer_inn .footer_inn_top .footer_inn_top_2 a {margin:0 25px}
+#footer .footer_inn .footer_inn_top .footer_inn_top_3 a {margin-left:25px}
+
+#footer .footer_inn .footer_inn_bottom {display:block;margin:20px 0 5px;color:#444}
+#footer .footer_inn .footer_inn_bottom p {position:relative;display:block;margin-right:9px;color:#444;font-size:11px;font-weight:600;line-height:1.6}
+#footer .footer_inn .footer_inn_bottom span {padding:0 5px;color:#ddd}
+#footer .footer_inn .footer_inn_bottom  .check {position:absolute;top:-1px;right:290px;display:block;width:93px;height:21px;background:url(../img/sp_com.png) no-repeat -176px 0;text-indent:-9999em}
+
+#footer .footer_inn .Copyright {display:block;color:#444;font-size:12px;font-weight:600;letter-spacing:-0.1em}
