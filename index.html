@@ -2,6 +2,7 @@
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=yes, target-densitydpi=device-dpi">
 <title>KCC</title>
 <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
 <link rel="icon" href="favicon.png" type="image/x-icon">
@@ -28,7 +29,7 @@
 			<div class="header_inn clearfix">
 				<div class="login clearfix ">
 					<ul>
-						<li class="login"><a href="#">로그인</a></li>
+						<li class="login-out"><a href="#">로그인</a></li>
 						<li class="join"><a href="other/join/index.html">회원가입</a></li>
 						<li class="sitemap"><a href="#">사이트맵</a></li>
 					</ul>
@@ -39,6 +40,12 @@
 					</div>
 					<div class="gnbarea">
 						<h1 class="blind">main menu</h1>
+						<button type="button" class="mo_btn">
+							<span class="blind">모바일 메뉴 버튼</span>
+							<span></span>
+							<span></span>
+							<span></span>
+						</button>
 						<ul class="clearfix">
 							<li class="mm introduction">
 								<a href="#">introduction클럽소개</a>
@@ -89,6 +96,7 @@
 							</li>
 						</ul>
 					</div>
+					<div class="mo-gnb-shadow"></div>
 				</div>
 			</div>
 		</div>
@@ -99,24 +107,42 @@
 				<div class="content_top clearfix">
 					<div class="weather">
 						<h2 class="blind">weather</h2>
-						<ul class="weather_top clearfix">
-							<li class="today1"><span>오늘</span><img src="img/w_l2.png" alt="weather"></li>
-							<li class="today2"><span class="date">02. 14 FRI</span><span class="big">23</span><span class="icon23"></span></li>
-							<li class="today3 clearfix "><span class="today3icon">최고 25<em></em></span><span class="today3icon">최저 14<em></em></span><span>강수확률 0%</span></li>
-						</ul>
-						<ul class="weather_mid clearfix">
-							<li class="weather1">내일<img src="img/w_s4.png" alt=""></li>
-							<li class="weather2">모레<img src="img/w_s3.png" alt=""></li>
-						</ul>
-						<ul class="weather_bottom">
-							<li><a href="#">주간 날씨보기<img src="img/arw_weather.png" alt=""></a></li>
-						</ul>
+						<div class="weather_top">
+							<div class="today_wt">
+								<span class="tit">오늘</span>
+								<span class="date"></span>
+								<div class="today_wt_icon">
+									<img src="img/w_l1.png" alt="맑은 날씨 아이콘(큰 사이즈)">
+								</div>
+								<div class="today_wt_icon temp">
+									<em>-7</em>
+									<img src="img/c.png" alt="도씨(℃) 아이콘">
+								</div>
+								<div class="today_wt_temp">
+									<p>최고 3℃ 최저 -9℃ 강수확률 0%</p>
+								</div>
+							</div>
+						</div>
+						<div class="weather_mid">
+							<div class="tomorrow_wt">
+								<span class="tit">내일</span>
+								<img src="img/w_s4.png" alt="맑은 날씨 아이콘(작은 사이즈)">
+							</div>
+							<div class="after_tomorrow_wt">
+								<span class="tit">모레</span>
+								<img src="img/w_s5.png" alt="비오는 아이콘(작은 사이즈)">
+							</div>
+						</div>
+						<div class="weather_bottom">
+							<a href="#">주간 날씨 보기</a>
+							<p>출처:기상청</p>
+						</div>
 					</div>
 					<div class="iconarea">
 						<ul class="clearfix">
-							<li class="iconreservation"><a href="#">온라인 예약하기</a></li>
-							<li class="iconwebcam"><a href="#">현재 필드상태를 보여드립니다</a></li>
-							<li class="iconmobile"><a href="#">모바일에서도 금강CC를 만나세요</a></li>
+							<li class="iconreservation"><a href="#" title="온라인 예약하기">온라인 예약하기</a></li>
+							<!-- <li class="iconwebcam"><a href="#">현재 필드상태를 보여드립니다</a></li> -->
+							<li class="iconmobile"><a href="#" title="금강컨트리클럽 APP 바로가기">모바일에서도 금강CC를 만나세요</a></li>
 						</ul>
 					</div>
 				</div>
@@ -129,19 +155,35 @@
 								<span class="btn_rgt">rgt</span>
 							</a>
 						</h2>
-						<ul class="notice_menu clearfix">
-							<li class="clearfix"><a href="#">1~2월 동계휴장 및 그린피 안내</a><span>16.12.18</span></li>
-							<li class="clearfix"><a href="#">12월 티업시간 및 그린피 안내</a><span>16.11.14</span></li>
-							<li class="clearfix"><a href="#">2016년 12월 운영 및 그린피 안내</a><span>16.11.05</span></li>
-							<li class="clearfix"><a href="#">2016년 11월 운영 및 그린피 안내</a><span>16.10.23</span></li>
-					 		<li class="lastnoticemenu clearfix"><a href="#">11월 그린피 안내</a><span>16.10.26 </span></li>
-						</ul>
+						<div class="notice_lst bxslider_notice">
+							<ul class="lst_wrap">
+								<li class="clearfix"><a href="#">2016년 10월 29일 회원초청 친선골프행사 결과안내</a><span>16.11.18</span></li>
+								<li class="clearfix"><a href="#">11월 티업시간 및 그린피 안내</a><span>16.10.14</span></li>
+								<li class="clearfix"><a href="#">2016년 10월 운영 및 그린피 안내</a><span>16.09.05</span></li>
+								<li class="clearfix"><a href="#">2016년 9월 30일 회원초청 친선골프 행사 안내</a><span>16.08.23</span></li>
+						 		<li class="lastnoticemenu clearfix"><a href="#">8월 그린피 안내</a><span>16.07.26 </span></li>
+							</ul>
+							<ul class="lst_wrap">
+								<li class="clearfix"><a href="#">3~4월 동계휴장 및 그린피 안내</a><span>16.06.18</span></li>
+								<li class="clearfix"><a href="#">04월 티업시간 및 그린피 안내</a><span>16.05.14</span></li>
+								<li class="clearfix"><a href="#">2016년 05월 운영 및 그린피 안내</a><span>16.04.05</span></li>
+								<li class="clearfix"><a href="#">2016년 06월 운영 및 그린피 안내</a><span>16.03.23</span></li>
+						 		<li class="lastnoticemenu clearfix"><a href="#">2016년 3월 24일(月) 회원초청 친선골프 행사 안내</a><span>16.02.26 </span></li>
+							</ul>
+							<ul class="lst_wrap">
+								<li class="clearfix"><a href="#">1~2월 동계휴장 및 그린피 안내</a><span>16.12.18</span></li>
+								<li class="clearfix"><a href="#">12월 티업시간 및 그린피 안내</a><span>16.11.14</span></li>
+								<li class="clearfix"><a href="#">2016년 12월 운영 및 그린피 안내</a><span>16.11.05</span></li>
+								<li class="clearfix"><a href="#">2016년 09월 31일(月) 회원초청 친선골프 행사 결과 안내</a><span>16.10.23</span></li>
+						 		<li class="lastnoticemenu clearfix"><a href="#">11월 그린피 안내</a><span>16.10.26 </span></li>
+							</ul>
+						</div>
 						<ul class="bxslider clearfix">
-							<li><a href="#"><img src="img/banner_1.jpg" alt=""></a></li>
-							<li><a href="#"><img src="img/banner_2.jpg" alt=""></a></li>
-							<li><a href="#"><img src="img/banner_3.jpg" alt=""></a></li>
-							<li><a href="#"><img src="img/banner_4.jpg" alt=""></a></li>
-							<li><a href="#"><img src="img/banner_6.jpg" alt=""></a> </li>
+							<li><a href="#"><img src="img/banner_1.jpg" alt="현대백화점 상품권을 이용하세요 회원님 및 고객님들의 편의를 위해 현대백화점과 가맹점 계약을 체결하였습니다. 많은 이용바랍니다."></a></li>
+							<li><a href="#"><img src="img/banner_2.jpg" alt="국민관광상품권을 이용하세요 회원님 및 고객님들의 편의를 위하여 국민관광상품권 이용계약을 체결하였습니다. 많은 이용바랍니다.(국민관광상품권 카드사용불가)"></a></li>
+							<!-- <li><a href="#"><img src="img/banner_3.jpg" alt=""></a></li> -->
+							<li><a href="#"><img src="img/banner_4.jpg" alt="현대카드 M포인트 사용 가능 그린피 결제 시 1만 M포인트 사용 *1,000 M포인트 이상 보유 시 사용 가능"></a></li>
+							<li><a href="#"><img src="img/banner_6.jpg" alt="상성카드 포인트 사용 가능 그린피 결제 시 1만 포인트 사용 가능 ※보유 포인트 확인 방법 삼성카드 대표전화 1588-8700 > 2번 > #버튼 > 917번"></a> </li>
 						</ul>
 						<span class="deco">deco</span>
 					</div>
