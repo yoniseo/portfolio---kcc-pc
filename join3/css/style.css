@@ -2,7 +2,7 @@
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 
 /* Common */
-html{overflow-y: scroll}
+html{overflow-x:hidden}
 body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select{margin:0;padding:0}
 body,input,textarea,select,button,table{font-family: 'Nanum Gothic', sans-serif;font-size:12px}
 img,fieldset{border:0}
@@ -22,28 +22,32 @@ legend{*width:0}
 
 /* style */
 #wrap {}
-#bg_top {min-width:980px;width:100%;background:url(../img/mainbg.png) no-repeat 50% 0}
-#bg_bottom {min-width:980px;width:100%;background:url(../img/bottombg.png) no-repeat 50% 0}
+#bg_top {width:100%;background:url(../img/mainbg.png) no-repeat 50% 0}
+#bg_bottom {min-width:980px;width:100%;background:url(../img/bottombg.png) no-repeat 50% 100%}
 
 /* header */
 /*#header {min-width:980px}*/
 #header .header_inn {width:980px;margin:0 auto}
 #header .header_inn .login {padding:30px 0 20px}
-#header .header_inn .login ul {float:right}
+#header .header_inn .login ul {float:right;font-size:0}
 #header .header_inn .login ul li {float:left}
-#header .header_inn .login ul .login {padding:0 20px;background:url(../img/lgnbar.png) no-repeat 73px 2px}
+#header .header_inn .login ul .login-out {padding:0 20px;background:url(../img/lgnbar.png) no-repeat 73px 2px}
 #header .header_inn .login ul .join {padding:0 20px;background:url(../img/lgnbar.png) no-repeat 84px 2px}
 #header .header_inn .login ul .sitemap {padding-left:20px}
-#header .header_inn .login ul li a {display:block;color:#444}
+#header .header_inn .login ul li a {display:block;color:#444;font-size:12px;}
 #header .header_inn .login ul li a:hover {text-decoration:underline}
 
-#header .header_inn .gnb {}
+#header .header_inn .gnb {position:relative}
 #header .header_inn .gnb .logo {float:left;width:163px;border-top:3px solid #115fad}
 #header .header_inn .gnb .logo a {display:block;width:172px;height:33px;padding-top:20px;background:url(../img/sp_com.png) no-repeat 0 -5px;text-indent:-9999em}
 #header .header_inn .gnb .gnbarea {float:right;border-top:3px solid #12140b}
-#header .header_inn .gnb .gnbarea ul {}
-#header .header_inn .gnb .gnbarea ul li {float:left;margin-top:20px}
-#header .header_inn .gnb .gnbarea ul li a{margin:0 40px}
+#header .header_inn .gnb .gnbarea .mo_btn{display:none;position:absolute;top:0;right:0;padding:7px 5px;border:none;background-color:transparent;cursor:pointer;z-index:1002}
+#header .header_inn .gnb .gnbarea .mo_btn span{display:block;width:25px;height:3px;margin-bottom:5px;
+	background-color:#000}
+	#header .header_inn .gnb .gnbarea .mo_btn span:last-child{margin-bottom:0}
+#header .header_inn .gnb .gnbarea ul {font-size:0}
+#header .header_inn .gnb .gnbarea ul .mm {float:left;margin-top:20px}
+#header .header_inn .gnb .gnbarea ul .mm a{margin:0 40px;font-size:12px}
 #header .header_inn .gnb .gnbarea .mm_sub {display:none}
 
 #header .header_inn .gnb .gnbarea ul .introduction {position:relative}
@@ -147,6 +151,52 @@ legend{*width:0}
 #header .header_inn .gnb .gnbarea ul .community .community_sub .community_sub2 a {background:url(../img/sp_com.png) no-repeat -350px -135px}
 #header .header_inn .gnb .gnbarea ul .community:hover .community_sub .community_sub2 a {background:url(../img/sp_com.png) no-repeat -350px -180px}
 #header .header_inn .gnb .gnbarea ul .community .community_sub .community_sub2 a:hover {background:url(../img/sp_com.png) no-repeat -350px -225px}
+#header .header_inn .mo-gnb-shadow{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,.6);z-index:1000}
+
+@media screen and (max-width: 1024px){
+	#header .header_inn{width:740px}
+	/*#header .header_inn .gnb .logo,
+	#header .header_inn .gnb .logo a{width:59px}*/
+	#header .header_inn .gnb .logo{width:80px}
+	#header .header_inn .gnb .logo a{width:59px}
+	#header .header_inn .gnb .gnbarea ul .mm.introduction a{margin:0 25px 0 0}
+	#header .header_inn .gnb .gnbarea ul .mm a{margin:0 25px}
+}
+@media screen and (max-width: 768px){
+	html.show{overflow:hidden}
+	#header{padding-top:15px}
+	#header .header_inn{width:100%;padding:0 15px;box-sizing:border-box}
+	#header .header_inn .login{display:none}
+	html.show #header .header_inn .login{display:block;position:fixed;top:0;right:0;width:300px;padding:25px 15px 25px 15px;text-align:left;box-sizing:border-box;z-index:1002}
+	#header .header_inn .login ul{float:none}
+	#header .header_inn .login ul li{float:none;display:inline-block}
+	#header .header_inn .login ul .login-out{padding:0 10px 0 0;background:url(../img/lgnbar.png) no-repeat 43px 2px}
+	#header .header_inn .login ul .join{background:url(../img/lgnbar.png) no-repeat 64px 2px}
+	#header .header_inn .login ul .join,
+	#header .header_inn .login ul .sitemap{padding:0 10px}
+	#header .header_inn .gnb .logo{border-top:none}
+	#header .header_inn .gnb .logo a{padding-top:0;background:url(../img/sp_com.png) no-repeat 0 -21px}
+	#header .header_inn .gnb .gnbarea{float:none;border-top:none}
+	#header .header_inn .gnb .gnbarea .mo_btn{display:inline-block}
+	html.show #header .header_inn .gnb .gnbarea .mo_btn{}
+	html.show #header .header_inn .gnb .gnbarea .mo_btn span:last-child{display:none}
+	html.show #header .header_inn .gnb .gnbarea .mo_btn span:nth-child(2){position:relative;top:7px;transform:rotate(45deg);}
+	html.show #header .header_inn .gnb .gnbarea .mo_btn span:nth-child(3){position:relative;top:-1px;transform:rotate(135deg);}
+	#header .header_inn .gnb .gnbarea > ul{display:none;position:fixed;bottom:0;right:0;width:300px;height:calc(100% - 63px);padding:0 15px;background-color:#fff;border-top:1px solid #f3f3f3;overflow-y:auto;box-sizing:border-box;overflow-x:hidden;z-index:1001}
+	html.show #header .header_inn .gnb .gnbarea > ul{display:block}
+	html.show #header .header_inn .gnb .gnbarea:after{content:'';position:absolute;top:-15px;right:-15px;width:300px;height:63px;background-color:#fff;z-index:1001}
+	#header .header_inn .gnb .gnbarea ul .mm{float:none;margin:0;padding:15px 0 5px 0;border-top:1px solid #f3f3f3}
+	#header .header_inn .gnb .gnbarea ul .mm:first-child{border-top:none}
+	#header .header_inn .gnb .gnbarea ul .introduction .introduction_sub,
+	#header .header_inn .gnb .gnbarea ul .reservation .reservation_sub,
+	#header .header_inn .gnb .gnbarea ul .course .course_sub,
+	#header .header_inn .gnb .gnbarea ul .facilities .facilities_sub,
+	#header .header_inn .gnb .gnbarea ul .community .community_sub{display:block !important;position:relative;top:0;border-bottom:none;padding:0}
+	#header .header_inn .gnb .gnbarea ul .mm .mm_sub li{margin:10px 0}
+	#header .header_inn .gnb .gnbarea ul .mm.introduction a,
+	#header .header_inn .gnb .gnbarea ul .mm a{margin:0}
+	html.show #header .header_inn .mo-gnb-shadow{display:block}
+}
 
 
 /* content */
@@ -265,13 +315,74 @@ legend{*width:0}
 #content .content_inn .box_01 .join_box .join_box2 .inputfield_married_yymmdd select {padding:5px;color:#666;background-color:#f4f4f4;font-size:13px;border:1px solid #cccccf}
 #content .content_inn .box_01 .join_box .join_box2 .inputfield_married_yymmdd label {margin:0 3px;color:#666;font-size:13px;line-height:2}
 
-
 #content .content_inn .submit {}
 #content .content_inn .submit p {display:block;width:198px;margin:25px auto 0}
 #content .content_inn .submit p .submiticon {display:block;float:left;width:94px;height:34px;margin-right:10px;background:url(../img/sp_com_sub.png) no-repeat -1px -210px;background-color:#0084f4;color:#fff;font-size:13px;font-weight:600;border:1px solid #0084c3;border-radius:3px;cursor:pointer}
 #content .content_inn .submit p .reseticon {display:block;width:94px;height:34px;background:url(../img/sp_com_sub.png) no-repeat -1px -172px;background-color:#eee;color:#767676;font-size:13px;font-weight:600;border:1px solid #acacac;border-radius:3px;cursor:pointer}
+@media screen and (max-width: 1024px){
+	#content{min-width:100%}
+	#content .content_inn{width:740px}
+	
+	#content .content_inn .sidemenu{display:inline-block;width:30%;padding-right:50px;box-sizing:border-box}
+	#content .content_inn .membership{display:inline-block;width:70%}
+	#content .content_inn .membership .membership_top{width:100%}
+	#content .content_inn .membership .membership_mid li span{width:105px;height:auto;line-height:5}
+	#content .content_inn .membership .membership_mid .agree .membership_arrow,
+	#content .content_inn .membership .membership_mid li .membership_arrow{top:21px}
+	#content .content_inn .box_01 .tos_01,
+	#content .content_inn .box_02 .tos_02,
+	#content .content_inn .box_02 .caution{width:100%;box-sizing:border-box}
+	#content .content_inn .box_01 .tos_01{height:auto}
 
-/* footer*/
+	#content .content_inn .box_01 .join_box{width:100%}
+	#content .content_inn .box_01 .join_box .join_box1 .inputfield_address input,
+	#content .content_inn .box_01 .join_box .join_box2 .inputfield_job_address input{width:60%}
+}
+@media screen and (max-width: 768px){
+	#content .content_inn{width:100%;padding:0 15px;box-sizing:border-box}
+	#content .content_inn .sidemenu{display:none}
+	#content .content_inn .membership{float:none;width:100%}
+	#content .content_inn .membership .membership_mid{margin-right:-5%;font-size:0}
+	#content .content_inn .membership .membership_mid li{width:25%;padding-left:0;box-sizing:border-box}
+	#content .content_inn .membership .membership_mid li span{width:80%}
+	#content .content_inn .membership .membership_mid .agree .membership_arrow,
+	#content .content_inn .membership .membership_mid li .membership_arrow{left:-15%}
+	#content .content_inn .box_02 .caution .caution_icon{float:none;display:block;position:absolute;left:0}
+	#content .content_inn .box_02 .caution strong{display:inline-block;position:relative}
+	#content .content_inn .box_01 .tos_01 .tos_text_area p{width:100%;max-width:410px}
+}
+@media screen and (max-width: 565px){
+	#content .content_inn .membership .membership_mid li span{width:75%;font-size:11px}
+	#content .content_inn .membership .membership_mid li .membership_arrow{top:18px;left:-21%}
+}
+@media screen and (max-width: 445px){
+	#content .content_inn .membership .membership_mid{margin-right:-2%}
+	#content .content_inn .membership .membership_mid .agree .membership_arrow,
+	#content .content_inn .membership .membership_mid li .membership_arrow{display:none}
+	#content .content_inn .membership .membership_mid li span{width:90%}
+	#content .content_inn .box_01 .join_box .join_box1 .inputfield label,
+	#content .content_inn .box_01 .join_box .join_box1 .inputfield_yymmdd p,
+	#content .content_inn .box_01 .join_box .join_box1 .inputfield_number label,
+	#content .content_inn .box_01 .join_box .join_box1 .inputfield_check p,
+	#content .content_inn .box_01 .join_box .join_box1 .inputfield_postalnumber label,
+	#content .content_inn .box_01 .join_box .join_box1 .inputfield_address label,
+	#content .content_inn .box_01 .join_box .join_box2 .inputfield label,
+	#content .content_inn .box_01 .join_box .join_box2 .inputfield_job_postalnumber label,
+	#content .content_inn .box_01 .join_box .join_box2 .inputfield_job_address label,
+	#content .content_inn .box_01 .join_box .join_box2 .inputfield_job_number label,
+	#content .content_inn .box_01 .join_box .join_box2 .inputfield_job_fax label,
+	#content .content_inn .box_01 .join_box .join_box2 .inputfield_married p,
+	#content .content_inn .box_01 .join_box .join_box2 .inputfield_married_yymmdd p{font-size:11px;width:80px}
+	#content .content_inn .box_01 .join_box .join_box1 .inputfield input{width:100px}
+	#content .content_inn .box_01 .join_box .join_box1 .inputfield_address .user_address_last,
+	#content .content_inn .box_01 .join_box .join_box2 .inputfield_job_address .user_address_last{margin-left:80px}
+	#content .content_inn .box_01 .join_box .join_box1 .inputfield em,
+	#content .content_inn .box_01 .join_box .join_box1 .inputfield_number em,
+	#content .content_inn .box_01 .join_box .join_box1 .inputfield_check em{display:block;margin:5px 0}
+}
+
+
+/* footer */
 #footer {min-width:980px}
 #footer .footer_inn {width:980px;margin:0 auto;padding:85px 0 255px}
 #footer .footer_inn .footer_inn_top {}
@@ -285,6 +396,24 @@ legend{*width:0}
 #footer .footer_inn .footer_inn_bottom {display:block;margin:20px 0 5px;color:#444}
 #footer .footer_inn .footer_inn_bottom p {position:relative;display:block;margin-right:9px;color:#444;font-size:11px;font-weight:600;line-height:1.6}
 #footer .footer_inn .footer_inn_bottom span {padding:0 5px;color:#ddd}
-#footer .footer_inn .footer_inn_bottom  .check {position:absolute;top:-1px;right:290px;display:block;width:93px;height:21px;background:url(../img/sp_com.png) no-repeat -176px 0;text-indent:-9999em}
+#footer .footer_inn .footer_inn_bottom .check {position:absolute;top:-1px;right:290px;display:block;width:93px;height:21px;padding:0 5px;border:1px solid #c9c9c9;border-radius:3px;background-color:#f5f5f5;color:#444;line-height:20px;box-sizing:border-box}
+#footer .footer_inn .footer_inn_bottom .check:after{content:'';position:absolute;top:7px;right:4px;width:3px;height:5px;background-image:url(../img/fot_icon.jpg)}
 
 #footer .footer_inn .Copyright {display:block;color:#444;font-size:12px;font-weight:600;letter-spacing:-0.1em}
+
+@media screen and (max-width: 1024px){
+	#bg_bottom,
+	#footer{min-width:auto}
+	#footer .footer_inn{width:740px}
+	#footer .footer_inn .footer_inn_bottom .check{right:48px}
+}
+@media screen and (max-width: 768px){
+	#footer{padding:0 15px}
+	#footer .footer_inn{width:100%}
+	#footer .footer_inn .footer_inn_bottom .check{display:inline-block;position:relative;top:0;right:0}
+}
+@media screen and (max-width: 445px){
+	#footer .footer_inn .footer_inn_top .footer_inn_top_1 a{margin:0 15px 0 0}
+	#footer .footer_inn .footer_inn_top .footer_inn_top_2 a{margin:0 15px}
+	#footer .footer_inn .footer_inn_top .footer_inn_top_3 a{margin:0 0 0 15px}
+}
