@@ -2,7 +2,7 @@
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 
 /* Common */
-html{overflow-y: scroll}
+html{overflow-x:hidden}
 body,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select{margin:0;padding:0}
 body,input,textarea,select,button,table{font-family: 'Nanum Gothic', sans-serif;font-size:12px}
 img,fieldset{border:0}
@@ -22,28 +22,32 @@ legend{*width:0}
 
 /* style */
 #wrap {}
-#bg_top {/*min-width:980px;*/width:100%;background:url(../img/mainbg.png) no-repeat 50% 0}
-#bg_bottom {min-width:980px;width:100%;background:url(../img/bottombg.png) no-repeat 50% 0}
+#bg_top {width:100%;background:url(../img/mainbg.png) no-repeat 50% 0}
+#bg_bottom {min-width:980px;width:100%;background:url(../img/bottombg.png) no-repeat 50% 100%}
 
 /* header */
 /*#header {min-width:980px}*/
 #header .header_inn {width:980px;margin:0 auto}
 #header .header_inn .login {padding:30px 0 20px}
-#header .header_inn .login ul {float:right}
+#header .header_inn .login ul {float:right;font-size:0}
 #header .header_inn .login ul li {float:left}
-#header .header_inn .login ul .login {padding:0 20px;background:url(../img/lgnbar.png) no-repeat 73px 2px}
+#header .header_inn .login ul .login-out {padding:0 20px;background:url(../img/lgnbar.png) no-repeat 73px 2px}
 #header .header_inn .login ul .join {padding:0 20px;background:url(../img/lgnbar.png) no-repeat 84px 2px}
 #header .header_inn .login ul .sitemap {padding-left:20px}
-#header .header_inn .login ul li a {display:block;color:#444}
+#header .header_inn .login ul li a {display:block;color:#444;font-size:12px;}
 #header .header_inn .login ul li a:hover {text-decoration:underline}
 
-#header .header_inn .gnb {}
+#header .header_inn .gnb {position:relative}
 #header .header_inn .gnb .logo {float:left;width:163px;border-top:3px solid #115fad}
 #header .header_inn .gnb .logo a {display:block;width:172px;height:33px;padding-top:20px;background:url(../img/sp_com.png) no-repeat 0 -5px;text-indent:-9999em}
 #header .header_inn .gnb .gnbarea {float:right;border-top:3px solid #12140b}
-#header .header_inn .gnb .gnbarea ul {}
-#header .header_inn .gnb .gnbarea ul li {float:left;margin-top:20px}
-#header .header_inn .gnb .gnbarea ul li a{margin:0 40px}
+#header .header_inn .gnb .gnbarea .mo_btn{display:none;position:absolute;top:0;right:0;padding:7px 5px;border:none;background-color:transparent;cursor:pointer;z-index:1002}
+#header .header_inn .gnb .gnbarea .mo_btn span{display:block;width:25px;height:3px;margin-bottom:5px;
+	background-color:#000}
+	#header .header_inn .gnb .gnbarea .mo_btn span:last-child{margin-bottom:0}
+#header .header_inn .gnb .gnbarea ul {font-size:0}
+#header .header_inn .gnb .gnbarea ul .mm {float:left;margin-top:20px}
+#header .header_inn .gnb .gnbarea ul .mm a{margin:0 40px;font-size:12px}
 #header .header_inn .gnb .gnbarea .mm_sub {display:none}
 
 #header .header_inn .gnb .gnbarea ul .introduction {position:relative}
@@ -147,26 +151,83 @@ legend{*width:0}
 #header .header_inn .gnb .gnbarea ul .community .community_sub .community_sub2 a {background:url(../img/sp_com.png) no-repeat -350px -135px}
 #header .header_inn .gnb .gnbarea ul .community:hover .community_sub .community_sub2 a {background:url(../img/sp_com.png) no-repeat -350px -180px}
 #header .header_inn .gnb .gnbarea ul .community .community_sub .community_sub2 a:hover {background:url(../img/sp_com.png) no-repeat -350px -225px}
+#header .header_inn .mo-gnb-shadow{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background-color:rgba(0,0,0,.6);z-index:1000}
+
+@media screen and (max-width: 1024px){
+	#header .header_inn{width:740px}
+	/*#header .header_inn .gnb .logo,
+	#header .header_inn .gnb .logo a{width:59px}*/
+	#header .header_inn .gnb .logo{width:80px}
+	#header .header_inn .gnb .logo a{width:59px}
+	#header .header_inn .gnb .gnbarea ul .mm.introduction a{margin:0 25px 0 0}
+	#header .header_inn .gnb .gnbarea ul .mm a{margin:0 25px}
+}
+@media screen and (max-width: 768px){
+	html.show{overflow:hidden}
+	#header{padding-top:15px}
+	#header .header_inn{width:100%;padding:0 15px;box-sizing:border-box}
+	#header .header_inn .login{display:none}
+	html.show #header .header_inn .login{display:block;position:fixed;top:0;right:0;width:300px;padding:25px 15px 25px 15px;text-align:left;box-sizing:border-box;z-index:1002}
+	#header .header_inn .login ul{float:none}
+	#header .header_inn .login ul li{float:none;display:inline-block}
+	#header .header_inn .login ul .login-out{padding:0 10px 0 0;background:url(../img/lgnbar.png) no-repeat 43px 2px}
+	#header .header_inn .login ul .join{background:url(../img/lgnbar.png) no-repeat 64px 2px}
+	#header .header_inn .login ul .join,
+	#header .header_inn .login ul .sitemap{padding:0 10px}
+	#header .header_inn .gnb .logo{border-top:none}
+	#header .header_inn .gnb .logo a{padding-top:0;background:url(../img/sp_com.png) no-repeat 0 -21px}
+	#header .header_inn .gnb .gnbarea{float:none;border-top:none}
+	#header .header_inn .gnb .gnbarea .mo_btn{display:inline-block}
+	html.show #header .header_inn .gnb .gnbarea .mo_btn{}
+	html.show #header .header_inn .gnb .gnbarea .mo_btn span:last-child{display:none}
+	html.show #header .header_inn .gnb .gnbarea .mo_btn span:nth-child(2){position:relative;top:7px;transform:rotate(45deg);}
+	html.show #header .header_inn .gnb .gnbarea .mo_btn span:nth-child(3){position:relative;top:-1px;transform:rotate(135deg);}
+	#header .header_inn .gnb .gnbarea > ul{display:none;position:fixed;bottom:0;right:0;width:300px;height:calc(100% - 63px);padding:0 15px;background-color:#fff;border-top:1px solid #f3f3f3;overflow-y:auto;box-sizing:border-box;overflow-x:hidden;z-index:1001}
+	html.show #header .header_inn .gnb .gnbarea > ul{display:block}
+	html.show #header .header_inn .gnb .gnbarea:after{content:'';position:absolute;top:-15px;right:-15px;width:300px;height:63px;background-color:#fff;z-index:1001}
+	#header .header_inn .gnb .gnbarea ul .mm{float:none;margin:0;padding:15px 0 5px 0;border-top:1px solid #f3f3f3}
+	#header .header_inn .gnb .gnbarea ul .mm:first-child{border-top:none}
+	#header .header_inn .gnb .gnbarea ul .introduction .introduction_sub,
+	#header .header_inn .gnb .gnbarea ul .reservation .reservation_sub,
+	#header .header_inn .gnb .gnbarea ul .course .course_sub,
+	#header .header_inn .gnb .gnbarea ul .facilities .facilities_sub,
+	#header .header_inn .gnb .gnbarea ul .community .community_sub{display:block !important;position:relative;top:0;border-bottom:none;padding:0}
+	#header .header_inn .gnb .gnbarea ul .mm .mm_sub li{margin:10px 0}
+	#header .header_inn .gnb .gnbarea ul .mm.introduction a,
+	#header .header_inn .gnb .gnbarea ul .mm a{margin:0}
+	html.show #header .header_inn .mo-gnb-shadow{display:block}
+}
 
 
 /* content */
 /*#content {min-width:980px}*/
 #content .content_inn {width:980px;margin:150px auto 0}
 #content .content_inn .content_top {}
-#content .content_inn .content_top .weather {float:left;width:245px;height:201px;background:url(../img/sp_main.png) no-repeat 0 0}
-#content .content_inn .content_top .weather .weather_top {color:#fff}
-#content .content_inn .content_top .weather .weather_top .today1 {position:relative;float:left;width:85px;height:65px;padding:15px}
-#content .content_inn .content_top .weather .weather_top .today1 span {font-size:14px}
-#content .content_inn .content_top .weather .weather_top .today1 img {position:absolute;top:24px;left:25px}
-#content .content_inn .content_top .weather .weather_top .today2 {position:relative;float:right;width:100px;height:65px;padding:15px}
-#content .content_inn .content_top .weather .weather_top .today2 span {font-size:14px}
-#content .content_inn .content_top .weather .weather_top .today2 span.date{text-transform:uppercase}
-#content .content_inn .content_top .weather .weather_top .today2 .big {position:absolute;top:27px;left:12px;display:block;width:100px;font-size:50px;font-weight:600;border-bottom:2px solid #fff;letter-spacing:-0.1em}
-#content .content_inn .content_top .weather .weather_top .today2 .icon23 {position:absolute;top:37px;right:30px;display:block;width:30px;height:40px;background:url(../img/sp_main.png) no-repeat -440px -205px}
-#content .content_inn .content_top .weather .weather_top .today3 {margin-left:20px}
-#content .content_inn .content_top .weather .weather_top .today3 span {float:left;margin:0 5px;font-size:13px}
-#content .content_inn .content_top .weather .weather_top .today3 .today3icon {position:relative;display:block;width:50px}
-#content .content_inn .content_top .weather .weather_top .today3 .today3icon em {position:absolute;top:2px;right:-5px;display:block;width:10px;height:15px ;background:url(../img/sp_main.png) no-repeat -475px -205px}
+#content .content_inn .content_top .weather {float:left;width:245px;/*background:url(../img/sp_main.png) no-repeat 0 0*/}
+#content .content_inn .content_top .weather .weather_top {background-color:rgba(7,37,25,.5)}
+#content .content_inn .content_top .weather .weather_top .today_wt{padding:15px;font-size:13px;color:#fff;box-sizing:border-box}
+#content .content_inn .content_top .weather .weather_top .today_wt .tit{display:inline-block;float:left;width:50%}
+#content .content_inn .content_top .weather .weather_top .today_wt .date{text-transform:uppercase}
+#content .content_inn .content_top .weather .weather_top .today_wt .today_wt_icon{display:inline-block;width:50%;text-align:center}
+#content .content_inn .content_top .weather .weather_top .today_wt .today_wt_icon.temp{float:right;position:relative;height:70px;text-align:left}
+#content .content_inn .content_top .weather .weather_top .today_wt .today_wt_icon.temp:after{content:'';position:absolute;bottom:2px;left:0;width:100%;height:2px;background-color:#fff}
+#content .content_inn .content_top .weather .weather_top .today_wt .today_wt_icon em{font-size:50px;font-weight:600;vertical-align:middle}
+#content .content_inn .content_top .weather .weather_top .today_wt .today_wt_icon img{vertical-align:middle}
+#content .content_inn .content_top .weather .weather_top .today_wt .today_wt_temp{display:block;padding:5px 0 0;text-align:center}
+#content .content_inn .content_top .weather .weather_top .today_wt .today_wt_temp p{}
+
+#content .content_inn .content_top .weather .weather_mid{margin-top:1px;font-size:0}
+#content .content_inn .content_top .weather .weather_mid .tomorrow_wt{position:relative;display:inline-block;width:50%;height:50px;background-color:rgba(7,37,25,.4);box-sizing:border-box}
+#content .content_inn .content_top .weather .weather_mid .tomorrow_wt .tit{position:absolute;top:50%;left:20px;transform:translateY(-50%);font-size:14px;color:#fff}
+#content .content_inn .content_top .weather .weather_mid .tomorrow_wt img{position:absolute;top:50%;right:20px;transform:translateY(-50%)}
+#content .content_inn .content_top .weather .weather_mid .after_tomorrow_wt{position:relative;display:inline-block;width:50%;height:50px;background-color:rgba(7,37,25,.5);box-sizing:border-box}
+#content .content_inn .content_top .weather .weather_mid .after_tomorrow_wt .tit{position:absolute;left:20px;top:50%;transform:translateY(-50%);font-size:14px;color:#fff}
+#content .content_inn .content_top .weather .weather_mid .after_tomorrow_wt img{position:absolute;top:50%;right:5px;transform:translateY(-50%)}
+
+#content .content_inn .content_top .weather .weather_bottom{margin-top:1px;padding:5px;background-color:rgba(7,37,25,.5);text-align:center}
+#content .content_inn .content_top .weather .weather_bottom a{position:relative;display:inline-block;margin-right:10px;padding-right:10px;font-size:13px;color:#fff}
+#content .content_inn .content_top .weather .weather_bottom a:after{content:'';position:absolute;top:3px;right:0;width:7px;height:9px;background:url(../img/arw_weather.png)}
+#content .content_inn .content_top .weather .weather_bottom p{display:inline-block;font-size:13px;color:#fff}
 
 #content .content_inn .content_top .weather .weather_mid {}
 #content .content_inn .content_top .weather .weather_mid li {position:relative;float:left;width:82px;margin:10px;color:#fff;font-size:14px}
@@ -185,26 +246,32 @@ legend{*width:0}
 #content .content_inn .content_top .iconarea ul li {float:left;position:relative}
 #content .content_inn .content_top .iconarea ul .iconreservation a {display:block;width:157px;height:52px;margin:0 55px 0 10px;background:url(../img/sp_main.png) no-repeat 0 -203px;text-indent:-9999em}
 #content .content_inn .content_top .iconarea ul .iconwebcam a {display:block;width:178px;height:52px;margin:0 55px 0 10px;background:url(../img/sp_main.png) no-repeat -250px -202px;text-indent:-9999em}
-#content .content_inn .content_top .iconarea ul .iconmobile a {display:block;width:192px;height:52px;margin:0 55px 0 10px;background:url(../img/sp_main.png) no-repeat -250px -248px;text-indent:-9999em}
+#content .content_inn .content_top .iconarea ul .iconmobile a {display:block;width:192px;height:52px;margin:0 55px 0 10px;background:url(../img/sp_main.png) no-repeat -250px -250px;text-indent:-9999em}
 
-#content .content_inn .content_mid {}
+#content .content_inn .content_mid {font-size:0}
 #content .content_inn .content_mid .mid_inn {position:relative}
-#content .content_inn .content_mid .mid_inn .notice {float:left;position:relative;display:block;width:245px;height:220px;background:url(../img/bg_main_con.jpg) no-repeat 0 0}
+#content .content_inn .content_mid .mid_inn .bx-wrapper:nth-child(2) {float:none;position:relative;display:inline-block;width:245px;min-width:245px}
+#content .content_inn .content_mid .mid_inn .bx-wrapper:nth-child(2) .bx-prev {position:absolute;top:36px;left:-65px;display:block;width:20px;height:20px;background:url(../img/sp_main.png)no-repeat -250px 0;text-indent: -9999em;z-index:999}
+#content .content_inn .content_mid .mid_inn .bx-wrapper:nth-child(2) .bx-prev.disabled {opacity:.4;cursor:default}
+#content .content_inn .content_mid .mid_inn .bx-wrapper:nth-child(2) .bx-next {position:absolute;top:36px;left:-40px;display:block;width:20px;height:20px;background:url(../img/sp_main.png)no-repeat -275px 0;text-indent: -9999em;z-index:999}
+#content .content_inn .content_mid .mid_inn .bx-wrapper:nth-child(2) .bx-next.disabled {opacity:.4;cursor:default}
+#content .content_inn .content_mid .mid_inn .notice {float:none;position:relative;display:inline-block;width:245px;height:220px;background-color:#e53132}
+#content .content_inn .content_mid .mid_inn .notice:after{content:'';position:absolute;bottom:20px;left:20px;width:73px;height:78px;background-image:url(../img/bg_main_icon.jpg);background-repeat:no-repeat}
 #content .content_inn .content_mid .mid_inn .notice .notice_inn {float:left;display:block;width:80px;height:70px;margin:20px;background:url(../img/sp_main.png) no-repeat -251px -38px;text-indent:-9999px}
-#content .content_inn .content_mid .mid_inn .notice a .btn_lft{position:absolute;top:20px;right:45px;float:left;display:block;width:20px;height:20px;background:url(../img/sp_main.png)no-repeat -250px 0;text-indent:-9999em}
-#content .content_inn .content_mid .mid_inn .notice a .btn_rgt{position:absolute;top:20px;right:20px;float:left;display:block;width:20px;height:20px;background:url(../img/sp_main.png)no-repeat -275px 0;text-indent:-9999em}
+#content .content_inn .content_mid .mid_inn .notice a .btn_lft{position:absolute;top:20px;right:45px;float:left;display:none;width:20px;height:20px;background:url(../img/sp_main.png)no-repeat -250px 0;text-indent:-9999em}
+#content .content_inn .content_mid .mid_inn .notice a .btn_rgt{position:absolute;top:20px;right:20px;float:left;display:none;width:20px;height:20px;background:url(../img/sp_main.png)no-repeat -275px 0;text-indent:-9999em}
 
-#content .content_inn .content_mid .mid_inn .notice_menu {float:left;display:block;width:205px;height:180px;padding:20px;background:url(../img/bg_main_con.jpg) no-repeat -245px 0}
-#content .content_inn .content_mid .mid_inn .notice_menu li {border-bottom:1px solid #bababa}
-#content .content_inn .content_mid .mid_inn .notice_menu li a {float:left;display:block;width:155px;color:#333;font-size:12px;font-weight:300;line-height:3;letter-spacing:-0.05em;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}
-#content .content_inn .content_mid .mid_inn .notice_menu li a:hover {text-decoration:underline}
-#content .content_inn .content_mid .mid_inn .notice_menu li span {float:right;color:#666;font-size:11px;font-weight:300;line-height:3.2}
-#content .content_inn .content_mid .mid_inn .notice_menu .lastnoticemenu {border-bottom:0}
+#content .content_inn .content_mid .mid_inn .lst_wrap {float:left;display:block;width:205px;height:180px;padding:20px;background-color:#e4e4e4}
+#content .content_inn .content_mid .mid_inn .lst_wrap li {border-bottom:1px solid #bababa}
+#content .content_inn .content_mid .mid_inn .lst_wrap li a {float:left;display:block;width:155px;color:#333;font-size:12px;font-weight:300;line-height:3;letter-spacing:-0.05em;text-overflow:ellipsis;white-space:nowrap;overflow:hidden}
+#content .content_inn .content_mid .mid_inn .lst_wrap li a:hover {text-decoration:underline}
+#content .content_inn .content_mid .mid_inn .lst_wrap li span {float:right;color:#666;font-size:11px;font-weight:300;line-height:3.2}
+#content .content_inn .content_mid .mid_inn .lst_wrap .lastnoticemenu {border-bottom:0}
 
 #content .content_inn .content_mid .mid_inn .banner {float:right;display:block;width:490px;height:220px;background:url(../img/bg_main_con.jpg) no-repeat -490px 0}
 #content .content_inn .content_mid .mid_inn .bxslider {min-width:490px;width:490px}
-#content .content_inn .content_mid .mid_inn .bxslider li {}
-#content .content_inn .content_mid .mid_inn .bxslider li a {}
+#content .content_inn .content_mid .mid_inn .bxslider li {background-color:#f3f3f3}
+#content .content_inn .content_mid .mid_inn .bxslider li a {display:block;width:100%}
 
 #content .content_inn .content_mid .mid_inn .deco {position:absolute;top:-15px;right:80px;display:inline-block;width:42px;height:32px;background:url(../img/sp_main.png) no-repeat -300px 0;text-indent:-9999em}
 
@@ -213,18 +280,78 @@ legend{*width:0}
 #content .content_inn .content_bottom .bottom_inn ul {}
 #content .content_inn .content_bottom .bottom_inn ul li {float:left}
 
-#content .content_inn .content_bottom .bottom_inn ul .btn_directions a {position:relative;display:block;width:245px;height:220px;background:url(../img/bg_main_con.jpg) no-repeat 0 -220px}
+#content .content_inn .content_bottom .bottom_inn ul .btn_directions a {position:relative;display:block;width:245px;height:220px;background-color:#e4e4e4}
+#content .content_inn .content_bottom .bottom_inn ul .btn_directions a:after{content:'';position:absolute;bottom:0;left:0;width:151px;height:137px;background-image:url(../img/bg_main_icon_2.png);background-repeat:no-repeat}
 #content .content_inn .content_bottom .bottom_inn ul .btn_directions a span {position:absolute;top:20px;left:20px;display:block;width:138px;height:39px;background:url(../img/sp_main.png) no-repeat -336px -40px;text-indent:-9999px}
 
-#content .content_inn .content_bottom .bottom_inn ul .btn_contact a {position:relative;display:block;width:245px;height:220px;background:url(../img/bg_main_con.jpg) no-repeat -245px -220px}
+#content .content_inn .content_bottom .bottom_inn ul .btn_contact a {position:relative;display:block;width:245px;height:220px;background-color:#444}
+#content .content_inn .content_bottom .bottom_inn ul .btn_contact a:after{content:'';position:absolute;bottom:20px;left:20px;width:78px;height:58px;background-image:url(../img/bg_main_icon_3.jpg);background-repeat:no-repeat}
 #content .content_inn .content_bottom .bottom_inn ul .btn_contact a span {position:absolute;top:20px;left:20px;display:block;width:140px;height:39px;background:url(../img/sp_main.png) no-repeat -336px -80px;text-indent:-9999px}
 
-#content .content_inn .content_bottom .bottom_inn ul .btn_club a {position:relative;display:block;width:245px;height:220px;background:url(../img/bg_main_con.jpg) no-repeat -490px -220px}
+#content .content_inn .content_bottom .bottom_inn ul .btn_club a {position:relative;display:block;width:245px;height:220px;background-color:#faf8eb}
+#content .content_inn .content_bottom .bottom_inn ul .btn_club a:after{content:'';position:absolute;bottom:0;left:0;width:245px;height:108px;background-image:url(../img/bg_main_icon_4.jpg);background-repeat:no-repeat;background-size:100%}
 #content .content_inn .content_bottom .bottom_inn ul .btn_club a span {position:absolute;top:20px;left:20px;display:block;width:138px;height:80px;background:url(../img/sp_main.png) no-repeat -250px -120px;text-indent:-9999px}
 
-#content .content_inn .content_bottom .bottom_inn ul .btn_course a {position:relative;display:block;width:245px;height:220px;background:url(../img/bg_main_con.jpg) no-repeat -735px -220px}
+#content .content_inn .content_bottom .bottom_inn ul .btn_course a {position:relative;display:block;width:245px;height:220px;background-color:#0662a3}
+#content .content_inn .content_bottom .bottom_inn ul .btn_course a:after{content:'';position:absolute;bottom:0;right:0;width:139px;height:173px;background-image:url(../img/bg_main_icon_5.jpg);background-repeat:no-repeat}
 #content .content_inn .content_bottom .bottom_inn ul .btn_course a span {position:absolute;top:20px;left:20px;display:block;width:90px;height:65px;background:url(../img/sp_main.png) no-repeat -390px -120px;text-indent:-9999px}
+@media screen and (max-width: 1024px){
+	#content .content_inn{width:740px}
+	#content .content_inn .content_top .weather,
+	#content .content_inn .content_top .iconarea{}
+	#content .content_inn .content_top .iconarea ul{}
+	#content .content_inn .content_top .iconarea ul li{margin:10px 0}
+	#content .content_inn .content_mid .mid_inn .notice,
+	#content .content_inn .content_mid .mid_inn .bx-wrapper:nth-child(2){width:50%;min-width:auto}
+	#content .content_inn .content_mid .mid_inn .bx-wrapper:nth-child(3){width:100%;min-width:100%}
+	#content .content_inn .content_mid .mid_inn .bx-wrapper:nth-child(3) .bx-pager{width:100%}
+	#content .content_inn .content_mid .mid_inn .bx-wrapper:nth-child(3) img{margin:0 auto}
+	#content .content_inn .content_mid .mid_inn .lst_wrap li a{width:275px}
+	#content .content_inn .content_mid .mid_inn .deco{top:205px}
+	#content .content_inn .content_bottom .bottom_inn ul{font-size:0}
+	#content .content_inn .content_bottom .bottom_inn ul li{float:none;display:inline-block;width:50%}
+	#content .content_inn .content_bottom .bottom_inn ul .btn_club a span{z-index:1}
+	#content .content_inn .content_bottom .bottom_inn ul .btn_club a:after{width:100%;height:75%;background-position:bottom center}
+	#content .content_inn .content_bottom .bottom_inn ul .btn_directions a,
+	#content .content_inn .content_bottom .bottom_inn ul .btn_contact a,
+	#content .content_inn .content_bottom .bottom_inn ul .btn_club a,
+	#content .content_inn .content_bottom .bottom_inn ul .btn_course a{width:100%}
+}
+@media screen and (max-width: 768px){
+	#content{padding:0 15px}
+	#content .content_inn{width:100%;margin:65px auto 0}
+	#content .content_inn .content_top .weather,
+	#content .content_inn .content_top .iconarea{float:none;display:inline-block;vertical-align:bottom}
+	#content .content_inn .content_top .iconarea ul{margin-top:0}
+	#content .content_inn .content_top .iconarea ul li{float:none;display:block}
+	#content .content_inn .content_mid .mid_inn .lst_wrap li a{width:75%}
+	#content .content_inn .content_mid .mid_inn .bxslider li a{}
+	#content .content_inn .content_mid .mid_inn .bx-wrapper img{}
+}
+@media screen and (max-width: 565px){
+	#content .content_inn .content_top .iconarea ul li{display:inline-block}
+	#content .content_inn .content_top .iconarea ul .iconreservation:after{content:'';position:absolute;top:1px;right:-4px;width:1px;height:45px;background-color:rgba(255,255,255,.5);box-shadow:0 5px 5px rgba(0,0,0,.5)}
+	#content .content_inn .content_top .iconarea ul .iconreservation a{width:47px;margin:0 10px}
+	#content .content_inn .content_top .iconarea ul .iconmobile a{width:49px;margin:0 10px}
+	#content .content_inn .content_mid .mid_inn .lst_wrap li a{width:65%}
+	#content .content_inn .content_mid .mid_inn .bxslider li a{padding:20px;box-sizing:border-box}
+	#content .content_inn .content_mid .mid_inn .bx-wrapper img{width:100%}
+	#content .content_inn .content_mid .mid_inn .deco{right:30px}
+}
+@media screen and (max-width: 445px){
+	#content .content_inn .content_top .weather{width:100%}
+	#content .content_inn .content_top .iconarea{display:none}
+	#content .content_inn .content_mid .mid_inn .notice, 
+	#content .content_inn .content_mid .mid_inn .bx-wrapper:nth-child(2),
+	#content .content_inn .content_bottom .bottom_inn ul li{width:100%}
+	#content .content_inn .content_mid .mid_inn .lst_wrap li a{width:75%}
+	#content .content_inn .content_mid .mid_inn .bx-wrapper:nth-child(2) .bx-prev{top:-184px;left:auto;right:45px}
+	#content .content_inn .content_mid .mid_inn .bx-wrapper:nth-child(2) .bx-next{top:-184px;left:auto;right:20px}
+	#content .content_inn .content_mid .mid_inn .deco{top:425px}
+	/*#content .content_inn .content_mid .mid_inn .bx-wrapper img{width:100%}*/
+}
 
+/* footer */
 #footer {min-width:980px}
 #footer .footer_inn {width:980px;margin:0 auto;padding:85px 0 255px}
 #footer .footer_inn .footer_inn_top {}
@@ -238,6 +365,24 @@ legend{*width:0}
 #footer .footer_inn .footer_inn_bottom {display:block;margin:20px 0 5px;color:#444}
 #footer .footer_inn .footer_inn_bottom p {position:relative;display:block;margin-right:9px;color:#444;font-size:11px;font-weight:600;line-height:1.6}
 #footer .footer_inn .footer_inn_bottom span {padding:0 5px;color:#ddd}
-#footer .footer_inn .footer_inn_bottom  .check {position:absolute;top:-1px;right:290px;display:block;width:93px;height:21px;background:url(../img/sp_com.png) no-repeat -176px 0;text-indent:-9999em}
+#footer .footer_inn .footer_inn_bottom .check {position:absolute;top:-1px;right:290px;display:block;width:93px;height:21px;padding:0 5px;border:1px solid #c9c9c9;border-radius:3px;background-color:#f5f5f5;color:#444;line-height:20px;box-sizing:border-box}
+#footer .footer_inn .footer_inn_bottom .check:after{content:'';position:absolute;top:7px;right:4px;width:3px;height:5px;background-image:url(../img/fot_icon.jpg)}
 
 #footer .footer_inn .Copyright {display:block;color:#444;font-size:12px;font-weight:600;letter-spacing:-0.1em}
+
+@media screen and (max-width: 1024px){
+	#bg_bottom,
+	#footer{min-width:auto}
+	#footer .footer_inn{width:740px}
+	#footer .footer_inn .footer_inn_bottom .check{right:48px}
+}
+@media screen and (max-width: 768px){
+	#footer{padding:0 15px}
+	#footer .footer_inn{width:100%}
+	#footer .footer_inn .footer_inn_bottom .check{display:inline-block;position:relative;top:0;right:0}
+}
+@media screen and (max-width: 445px){
+	#footer .footer_inn .footer_inn_top .footer_inn_top_1 a{margin:0 15px 0 0}
+	#footer .footer_inn .footer_inn_top .footer_inn_top_2 a{margin:0 15px}
+	#footer .footer_inn .footer_inn_top .footer_inn_top_3 a{margin:0 0 0 15px}
+}
